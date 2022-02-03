@@ -52,6 +52,19 @@ class WelcomePage extends StatelessWidget {
                 color: Colors.green[900],
               ),
             ),
+          ),
+          Row(
+            children: [
+              Image(
+                image: AssetImage('assets/icons/Icon_helper.png'),
+              ),
+              Expanded(
+                child: Container(
+                  height: 100,
+                  color: Colors.red,
+                ),
+              ),
+            ],
           )
         ],
       ),
