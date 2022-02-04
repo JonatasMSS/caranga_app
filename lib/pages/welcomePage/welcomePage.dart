@@ -1,5 +1,10 @@
+import 'dart:ui';
+
 import 'package:caranga_app/consts/consts.dart';
+import 'package:caranga_app/pages/welcomePage/welcomePageController.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -7,7 +12,10 @@ class WelcomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
+    final _controller = Get.find<WelcomePageController>();
+    final screenSize = _controller.screenSize(context);
+    final String _im = 'assets/icons/Icon_helper.svg';
+    Get.put(screenSize);
     return Scaffold(
       body: Column(
         children: [
@@ -26,7 +34,7 @@ class WelcomePage extends StatelessWidget {
           ),
           //Mensagem de Boas vindas
           Container(
-            height: 100,
+            height: 109,
             alignment: Alignment.bottomCenter,
             margin: const EdgeInsets.only(top: 10),
             width: screenSize.width,
@@ -34,8 +42,8 @@ class WelcomePage extends StatelessWidget {
             child: Text(
               "Bem vindo!",
               style: GoogleFonts.dongle(
-                fontSize: 115,
-                wordSpacing: 1,
+                fontSize: 100,
+                wordSpacing: 0,
                 color: greenOpac,
               ),
             ),
@@ -55,13 +63,24 @@ class WelcomePage extends StatelessWidget {
           ),
           Row(
             children: [
-              Image(
-                image: AssetImage('assets/icons/Icon_helper.png'),
+              Container(
+                margin: const EdgeInsets.only(left: 12),
+                child: SvgPicture.asset(
+                  "assets/icons/Icon_helper.svg",
+                  width: 90,
+                  fit: BoxFit.contain,
+                ),
               ),
               Expanded(
                 child: Container(
-                  height: 100,
-                  color: Colors.red,
+                  alignment: Alignment.centerLeft,
+                  height: 50,
+                  child: Text(
+                    "Logar-se como cuidador",
+                    style: GoogleFonts.dongle(
+                      fontSize: 33,
+                    ),
+                  ),
                 ),
               ),
             ],
