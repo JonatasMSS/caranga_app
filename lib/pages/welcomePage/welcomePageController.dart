@@ -1,3 +1,4 @@
+import 'package:caranga_app/consts/consts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,7 +11,7 @@ class WelcomePageController extends GetxController {
   @override
   void onInit() {
     // TODO: implement onInit
-    print("Tamanho da tela:");
+
     super.onInit();
   }
 }
