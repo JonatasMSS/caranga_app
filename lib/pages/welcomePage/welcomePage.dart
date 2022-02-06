@@ -81,11 +81,14 @@ class WelcomePage extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               width: screenSize.width,
               child: Container(
-                child: Text(
-                  "Registrar-se",
-                  style: GoogleFonts.dongle(
-                    fontSize: 40,
-                    color: Colors.grey[600],
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Registrar-se",
+                    style: GoogleFonts.dongle(
+                      fontSize: 40,
+                      color: Colors.grey[600],
+                    ),
                   ),
                 ),
               ),
@@ -96,11 +99,14 @@ class WelcomePage extends StatelessWidget {
               alignment: Alignment.topCenter,
               width: screenSize.width,
               child: Container(
-                child: Text(
-                  "Necessito de ajuda",
-                  style: GoogleFonts.dongle(
-                    fontSize: 40,
-                    color: Colors.grey[600],
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Necessito de ajuda",
+                    style: GoogleFonts.dongle(
+                      fontSize: 40,
+                      color: Colors.grey[600],
+                    ),
                   ),
                 ),
               ),
