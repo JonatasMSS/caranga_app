@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:caranga_app/consts/consts.dart';
+import 'package:caranga_app/core/widgets/homeCare_textbutton.dart';
 import 'package:caranga_app/pages/welcomePage/welcomePageController.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -77,41 +78,15 @@ class WelcomePage extends StatelessWidget {
             txt: "Logar-se como necessitado",
           ),
           Expanded(
-            child: Container(
-              alignment: Alignment.bottomCenter,
-              width: screenSize.width,
-              child: Container(
-                child: TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Registrar-se",
-                    style: GoogleFonts.dongle(
-                      fontSize: 40,
-                      color: Colors.grey[600],
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            child: homeCare_textButton(
+                width: screenSize.width, text: "Registrar-se"),
           ),
           Expanded(
-            child: Container(
-              alignment: Alignment.topCenter,
-              width: screenSize.width,
-              child: Container(
-                child: TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Necessito de ajuda",
-                    style: GoogleFonts.dongle(
-                      fontSize: 40,
-                      color: Colors.grey[600],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
+              child: homeCare_textButton(
+            width: screenSize.width,
+            text: "Necessito de ajuda",
+            aling: Alignment.center,
+          )),
         ],
       ),
     );
