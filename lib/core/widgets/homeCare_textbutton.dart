@@ -7,18 +7,20 @@ class homeCare_textButton extends StatelessWidget {
     this.width,
     this.text,
     this.aling = Alignment.bottomCenter,
+    required this.onPress,
   }) : super(key: key);
 
-  double? width;
-  String? text;
-  Alignment aling;
+  final double? width;
+  final String? text;
+  final Alignment aling;
+  final VoidCallback? onPress;
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: aling,
       width: width,
       child: TextButton(
-        onPressed: () {},
+        onPressed: onPress,
         child: Text(
           "$text",
           style: GoogleFonts.dongle(

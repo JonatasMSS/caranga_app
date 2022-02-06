@@ -62,7 +62,7 @@ class WelcomePage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           //LOGINS
@@ -79,14 +79,19 @@ class WelcomePage extends StatelessWidget {
           ),
           Expanded(
             child: homeCare_textButton(
-                width: screenSize.width, text: "Registrar-se"),
+              width: screenSize.width,
+              text: "Registrar-se",
+              onPress: () => Get.toNamed('registerPage'),
+            ),
           ),
           Expanded(
-              child: homeCare_textButton(
-            width: screenSize.width,
-            text: "Necessito de ajuda",
-            aling: Alignment.center,
-          )),
+            child: homeCare_textButton(
+              width: screenSize.width,
+              text: "Necessito de ajuda",
+              aling: Alignment.center,
+              onPress: () {},
+            ),
+          ),
         ],
       ),
     );
