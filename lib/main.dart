@@ -1,6 +1,7 @@
 import 'package:caranga_app/pages/registerPage/register_page.dart';
 import 'package:caranga_app/pages/welcomePage/welcomePage.dart';
 import 'package:caranga_app/pages/welcomePage/welcomePageBindings.dart';
+import 'package:caranga_app/routes/registerRouth_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
@@ -20,12 +21,9 @@ class MainApp extends StatelessWidget {
         GetPage(
           name: '/',
           binding: WelcomePageBindings(),
-          page: () => WelcomePage(),
+          page: () => const WelcomePage(),
         ),
-        GetPage(
-          name: '/registerPage',
-          page: () => const RegisterPage(),
-        )
+        ...RegisterrouthPage.routers,
       ],
     );
   }
